@@ -1,0 +1,16 @@
+{
+  "name": "bulma-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "./node_modules/.bin/node-sass --output-style compressed ./styles.scss > ./styles.css",
+    "sass-watch":"npm run sass -- --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "node-sass": "^4.7.2"
+  }
+}

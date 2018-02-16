@@ -1,0 +1,15 @@
+@import './node_modules/bulma/sass/utilities/initial-variables.sass';
+@import 'node_modules/bulma/sass/utilities/functions.sass';
+
+// Variables here.
+
+$primary: #1A1E24;
+
+// Color variables to color map
+@import './node_modules/bulma/sass/utilities/derived-variables.sass';
+
+// Rest of bulma
+@import './node_modules/bulma/bulma';
+
+// Global Settings
+body{background-color:blue;}

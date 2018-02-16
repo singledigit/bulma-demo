@@ -1,15 +1,56 @@
 @import './node_modules/bulma/sass/utilities/initial-variables.sass';
 @import 'node_modules/bulma/sass/utilities/functions.sass';
-
 // Variables here.
-
-$primary: #1A1E24;
-
+$rackspace-red: red;
+$rackspace-red-invert: findColorInvert($rackspace-red);
+$rackspace-black: #1a1e24;
+$rackspace-black-invert: findColorInvert($rackspace-black);
+$rackspace-blue: blue;
+$rackspace-blue-invert: findColorInvert($rackspace-black);
 // Color variables to color map
 @import './node_modules/bulma/sass/utilities/derived-variables.sass';
-
+$addColors: ( "rackspace-red":($rackspace-red, $rackspace-red-invert), "rackspace-black": ($rackspace-black, $rackspace-black-invert), "rackspace-blue": ($rackspace-blue, $rackspace-blue-invert), );
+$colors: map-merge($colors, $addColors);
 // Rest of bulma
 @import './node_modules/bulma/bulma';
-
 // Global Settings
-body{background-color:blue;}
+html,
+body {
+    height: 100%
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// page settings
+#body-splash {
+    background-color: $rackspace-black;
+    color: white;
+    a {
+        color: white;
+        text-decoration: underline;
+        &.button {
+            text-decoration: none;
+        }
+    }
+}
+
+.hero {
+    background-color: $primary;
+    .title,
+    .subtitle {
+        color: $primary-invert;
+    }
+    .hero-body {
+        padding: 1.5rem;
+    }
+}
